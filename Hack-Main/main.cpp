@@ -4,6 +4,9 @@
 
 #include <iostream>
 
+// TODO: Add a check to ensure that "ac_client.exe" is running before continuing.
+
+
 constexpr auto BASE_ADDRESS_OFFSET = 0x10F4F;
 constexpr auto BASE_ADDRESS_HEALTH_OFFSET = 0xF8;
 int main()
@@ -14,7 +17,7 @@ int main()
 	std::cout <<"Base Address " << std::hex << BaseAddress << '\n';
 
 	HANDLE Hprocess = OpenProcess(PROCESS_ALL_ACCESS, false, ProcessID);
-
+	
 	uintptr_t NewBaseAddress = BaseAddress + BASE_ADDRESS_OFFSET;
 
 	uintptr_t current_ammo_address = FindDMAAddy(Hprocess, NewBaseAddress, { BASE_ADDRESS_HEALTH_OFFSET });
@@ -27,8 +30,5 @@ int main()
 
 	int new_health = 6974;
 	WriteProcessMemory(Hprocess, (BYTE*)current_ammo_address, &new_health, sizeof(new_health), 0);
-
-
-
 
 }
