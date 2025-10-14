@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="include\GetProcessID.h" />
+    <ClInclude Include="include\GetBaseMoudleAddress.h" />
+    <ClInclude Include="include\FindDMAAddy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\GetProcessID.cpp" />
+    <ClCompile Include="src\GetBaseMoudleAddress.cpp" />
+    <ClCompile Include="src\FindDMAAddy.cpp" />
+  </ItemGroup>
+</Project>
