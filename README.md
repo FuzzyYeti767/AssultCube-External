@@ -14,7 +14,7 @@
 - Resolve a **dynamic pointer chain (DMA)**  
 - **Read process memory** using `ReadProcessMemory()`  
 - **Write process memory** using `WriteProcessMemory()`  
-
+- **Implement Assembly Code patch Function`  
 These features demonstrate basic Windows memory manipulation techniques for educational purposes.
 
 ---
