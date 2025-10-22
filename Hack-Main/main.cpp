@@ -93,6 +93,7 @@ int main()
 				}
 				else
 				{
+					std::cout << "No Recoil off !! " << '\n';
 					mem::PatchEx((BYTE*)BaseModuleAddress + 0x63786, (BYTE*)"\x50\x8D\x4C\x24\x1C\x51\x8B\xCE\xFF\xD2", 10, hProcess);
 				}
 			}
