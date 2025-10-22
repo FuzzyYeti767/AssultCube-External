@@ -4,10 +4,12 @@
     <ClInclude Include="include\GetProcessID.h" />
     <ClInclude Include="include\GetBaseMoudleAddress.h" />
     <ClInclude Include="include\FindDMAAddy.h" />
+    <ClInclude Include="include\mem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GetProcessID.cpp" />
     <ClCompile Include="src\GetBaseMoudleAddress.cpp" />
     <ClCompile Include="src\FindDMAAddy.cpp" />
+    <ClCompile Include="src\mem.cpp" />
   </ItemGroup>
 </Project>

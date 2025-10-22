@@ -22,8 +22,10 @@
     <ClInclude Include="include\FindDMAAddy.h" />
     <ClInclude Include="include\GetBaseMoudleAddress.h" />
     <ClInclude Include="include\GetProcessID.h" />
+    <ClInclude Include="include\mem.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\mem.cpp" />
     <ClCompile Include="src\FindDMAAddy.cpp" />
     <ClCompile Include="src\GetBaseMoudleAddress.cpp" />
     <ClCompile Include="src\GetProcessID.cpp" />
