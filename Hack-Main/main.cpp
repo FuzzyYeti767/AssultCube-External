@@ -66,10 +66,12 @@ int main()
 				bAmmo = !bAmmo;
 				if (bAmmo==true)
 				{
+					// FF 06 is inc variable value
 					mem::PatchEx((BYTE*)BaseModuleAddress + 0x637E9, (BYTE*)"\xFF\x06", 2, hProcess);
 				}
 				else
 				{
+					// FF 0E is dec variable value
 					mem::PatchEx((BYTE*)BaseModuleAddress + 0x637E9, (BYTE*)"\xFF\x0E", 2, hProcess);
 				}
 			}
