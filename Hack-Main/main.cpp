@@ -60,17 +60,19 @@ int main()
 	DWORD dwExit = 0;
 		while (GetExitCodeProcess(hProcess,&dwExit) &&dwExit==STILL_ACTIVE)
 		{
-
+			
 			if (GetAsyncKeyState(VK_NUMPAD1)&1)
 			{
 				bAmmo = !bAmmo;
 				if (bAmmo==true)
 				{
+					std::cout << "Ammo Hack On " << '\n';
 					// FF 06 is inc variable value
 					mem::PatchEx((BYTE*)BaseModuleAddress + 0x637E9, (BYTE*)"\xFF\x06", 2, hProcess);
 				}
 				else
 				{
+					std::cout << "Ammo Hack Off " << '\n';
 					// FF 0E is dec variable value
 					mem::PatchEx((BYTE*)BaseModuleAddress + 0x637E9, (BYTE*)"\xFF\x0E", 2, hProcess);
 				}
@@ -83,6 +85,7 @@ int main()
 			}
 			if (GetAsyncKeyState(VK_NUMPAD3) & 1)
 			{
+				
 			
 				bRecoil = !bRecoil;
 				if (bRecoil==true)
